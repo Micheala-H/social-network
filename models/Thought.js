@@ -5,10 +5,18 @@ const thoughtSchema = new Schema(
         thoughtText: {
             type: String,
             required: true,
-            //the character limits
+            minLength: 1,
+            maxLength: 280,
         },
         createdAt: {
-            //date
+            type: Date,
+            default: Date.now,
+        },
+        username: {
+
+        },
+        reactions: {
+            
         }
 
     }
